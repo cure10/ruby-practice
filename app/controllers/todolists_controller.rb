@@ -10,7 +10,9 @@ class TodolistsController < ApplicationController
   end
 
   def index
-    @lists = List.all
+    puts "作成したキー　#{ENV['SECRET_KEY']}"
+
+    @list = List.all
   end
 
   def show
